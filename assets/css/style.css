@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height:50px;
+    background-color: red;
+}
+.slider {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.slider--width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s;
+}
+.slider--item {
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0px 1px 1px #333;
+    font-size: 50px;
+}
+/*configurando as duas setinhas do slider*/
+.slider--controls {
+    position: absolute; /*Esse comportamento permite que o .slider--controls seja movido livremente dentro de seu contêiner pai, sem afetar o layout dos outros elementos*/
+    z-index: 99;/*A propriedade z-index controla a sobreposição dos elementos em uma página. Elementos com maior valor de z-index aparecem sobre aqueles com valores menores.
+    Definindo z-index: 99, o .slider--controls será exibido por cima de elementos com um z-index menor ou sem z-index definido (o valor padrão de z-index é 0).*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider--control {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
